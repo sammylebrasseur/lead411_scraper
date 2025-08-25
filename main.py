@@ -13,31 +13,7 @@ START_PAGE = 1
 PER_PAGE = 10000
 
 # 2. REQUEST INFO
-headers = {
-    'accept': 'application/json, text/plain, */*',
-    'accept-language': 'en-US,en;q=0.9',
-    'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3dlYmFwaS5sZWFkNDExLmNvbS9hcGkvdjIvY3VzdG9tZXIvY3JlYXRlX2ZyZWVfdHJpYWwiLCJpYXQiOjE3NTM0ODg4MDMsImV4cCI6MTc1MzY2MTYwMywibmJmIjoxNzUzNDg4ODAzLCJqdGkiOiJORTE4blBpVDJGS0JRdTFTIiwic3ViIjoiNDk0ODMxNyIsInBydiI6ImRhOWM1NTYwZGUxNjE1M2JhODE4MGM1ODkzZmQ3NDk0YWQ1OGFmOWUiLCJDS1k9IjoiVU9FKzRNNVhxRWJvM0N3MSIsIkZLVnB2S2NPNFJLMGhrUnFIRTRhIjoiTExsMnA1UUQ1MWp2M0NzaVFIY0xVYXBvUzR3WWRURTBrZGF0Y0hjWDNFRUVkSk1UaWp6R29OeTRDVExzekw1amhtS2twak9Ra0ZnV2hCN1lRSHRmK0ZIQmM2Tm1vSDllSEVOWDQ4dmM1ZGc0K25kY2FhWlhhemFIKy85YkJXRlBIMWJYY2phVWZ2cHNveGRwbW1LWmx6c09TRnVpIn0.53CNIf0lWEirYI3grnRDDHPO42kaO83-2UljVWa2Od4',
-    'content-type': 'application/x-www-form-urlencoded',
-    'origin': 'https://web.lead411.com',
-    'priority': 'u=1, i',
-    'referer': 'https://web.lead411.com/',
-    'sec-ch-ua': '"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"macOS"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-site',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
-}
 
-params = {
-    'page': '1',
-    'per_page': '25',
-}
-
-data = {
-    'crypt': '{"ct":"v2DDJeY/liVD9VmlFosVwb/WZ8cjcaI7qm7XD/GMt9AAFo97ht2/7DGBPe60VQ6McCF9+QwcF11EDoH2UxXSNWA46ksv9iJc1GVTDhrQFLxzIo2RTPePpvoGFGSh11ek0XLDoVlGYK2p/+zdvq9a5r64bbZAuOH9DXeVOzVG3VhGn46gStCO6oyVXwulL5wVM47wlz53fkiPhlLAuuSm+nop47zGI0bheLrfCKiMAA2u7kJ6nn6wU60GJD71QhthyV/eLx+wJQs+N/FQKhguZMIrfCU2wcIW9Zyt+HYMNaF7N8oV6ZLf0JarEX7KOj397s9BTizFPQTcx8WPnRBaNctpfjHEgg8x58LpVYu6EV7oPwxPHM8MegAdo7R1x++F6OJVEcdLFLOS5LIUm5UNjzzyGAboiefLbjDdD/+H7L8EWYDd9CeIjIXXJUVellSmEHmKSlZIW9/nXynzoYkEcFqhebiPydmJ2llDfW8xjZhWRgg1qUSNkpfB6q8YXNYdHtHQpGGIDjl5Z2o6v5BOUC0ISKXyQL6YwxQqlOVvDDTlK5i/DMg3Thr7XjbWbJge9I0VT7KSkYt0f+SG61wpeDBtZNU9sU4BsRdoH8vmFLBeOGiy75GE/9E7urug1B3sA9Qx9YMFfgUAevCbGPExEymRrD3YtwTskfSk19w7+k9kqGTnbHg1/Tdbmd9ikx/ldvfWH7uAGgYIfMRLOkIYyRBSaM1qMZ9staxqq1JNhm+mjk5HwckZgA4e0z/dBujqCGVOj/wrzYuaYi1MPiJjvmojhbPLf6Q0g1k4Ux2crMsoigaw2xAdPWU3z8h4WlYHF4BeWBtNuaOD2RyrCon8besESsUH8VC/6QJG30JcujNdefauMhv1kAbrwtc21ttJwaeONf7y9tK0+smef9znmaVFghZOk+p02h1EjaK4yZFXGvf7G7FPzMd0zLvrmljaUKlXsoCUnZXwv0iIHwJgSMLUkJQcqLUmGH57Nl25bMPzEX72gLeRLbDkn4P5yUe6brS3E1VO0zGPvedDo/PDWMXNbPf1XS5XR23UEwF6GaQNyltSEz5fDk0fLqn5VqW5z8WwzFVkpY87klexoejKlWs9k0dWmdaGm+G1wXu7qg3UZJ+0Yk0IRtuXFzf6rECwavTAGygELSFpEf9/LEbTXsGfV1/N1fa/JOxGNkn0kqsl4DuT682KY3IiQP3lEb2yrDdHZVukZgyFFV9DVdoU8bq2Q1vFqsFKimPb8Tl2ui1vyGCHop21ALfpk/hZMuAW4teXuGw2MLPEU0kHWUSIy6v5luApRpJ5SoePAQeA8Rphe5N9ZIu6jNX5DdLied9hjF/5WL4YySY8svULxt8XVLnXYLuS9TnWzDY9fr7ZBY3v0dcHY4zGRTesiAfSD1bWXzWb+w7mkpu7ApzUPc6zeG3SoB5YMAPLAV/Ndm/OSl9vNcunx96cz8pcv5hN0LoeaiBAKKwqC0CKeuiEbLy55VIRJlUnz1xekvBZ9W9hDaql6NXz6B9NavMqwD8EEHwyegOXazkr5fL85Tvtr47STJs+GHCz2E/7NFzW9V7MQH4fMjfCdOzvjh83EwdarJ6fQd3ImfkTBUhmYV78hnpy1tXkRZApebtRCn1uPUVd5QUF3orAyezvPu4eaZaBjhV/+IDbjTNfBZ19OTdKiVWYI7QxyPqabrw3A6udSBlVtlIz/R8i1MZTisn8hZwl9S4Fx12aRBCyPHtchWmOKKWXv6LrpBIxAwbFxSAVq0vge2IGLykL+pYanP+2Vc/gmVmlkv6eyRQVMwo+4/ajQqeHq1AZ1FmNyuy0gKiHviNB1auBB4tEIx8sjjD6v1j4GEZG1B0ezKHZ7H7w2rePPqZ8vrPIiWv4suohmnyykjlpSEm7cONQGqA6hp+5zSK206nut/1X8mDV6vwa+mvDoR+/WD4pNDTElSFWxjcQ0c+n48BqmJ160L94AXjMRZ+yHQEfiWKAi7VRoYQw7rbb1a/xNFQXAHry619VE12qGxX2xFw=","iv":"3f71e7fc45162b3c7eaeadf0a9754726","s":"17b98ba88feefd7f"}',
-}
 
 def remove_duplicate_dicts_from_list_of_dicts_based_on_key(key, list_of_dicts):
     seen = set()
